@@ -27,3 +27,4 @@ Route::post("login",[UserController::class,'login']);
 Route::get("/",[serviceController::class,'index']);
 Route::get("detail/{id}",[serviceController::class,'detail']);
 Route::post("add_to_cart",[serviceController::class,'addToCart']);
+Route::get("cartlist",[serviceController::class,'cartList']);

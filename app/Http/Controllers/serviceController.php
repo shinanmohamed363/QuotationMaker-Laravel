@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\service;
 use App\Models\Cart;
+use Illuminate\Support\Facades\DB;
 use Session;
 
 class serviceController extends Controller
@@ -41,5 +42,16 @@ class serviceController extends Controller
         $userId=Session::get('user')['id'];
         return Cart::where('user_id',$userId)->count();
 
+    }
+    function cartList()
+    {
+        $userId=Session::get('user')['id'];
+        $services= DB::table('cart')
+         ->join('services','cart.service_id','=','services.id')
+         ->where('cart.user_id',$userId)
+         ->select('services.*','cart.id as cart_id')
+         ->get();
+
+        return view('cartlist',['services'=>$services]);
     }
 }
