@@ -1,9 +1,10 @@
 <?php
-
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\serviceController;
 
+use App\Mail\hellomail;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,3 +29,9 @@ Route::get("/",[serviceController::class,'index']);
 Route::get("detail/{id}",[serviceController::class,'detail']);
 Route::post("add_to_cart",[serviceController::class,'addToCart']);
 Route::get("cartlist",[serviceController::class,'cartList']);
+Route::get("removecart/{id}",[serviceController::class,'removeCart']);
+Route::get("ordernow",[serviceController::class,'orderNow']);
+Route::post("orderplace",[serviceController::class,'orderplace']);
+
+
+route::get('email',function(){mail::to('shinanmohamed363@gmail.com')->send(new \App\Mail\hellomail);});
