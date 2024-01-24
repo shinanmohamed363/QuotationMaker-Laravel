@@ -18,5 +18,12 @@ use App\Http\Controllers\serviceController;
 Route::get('/login', function () {
     return view('login');
 });
+
+Route::get('/logout', function () {
+    session()->forget('user');
+    return redirect('/login');
+});
 Route::post("login",[UserController::class,'login']);
 Route::get("/",[serviceController::class,'index']);
+Route::get("detail/{id}",[serviceController::class,'detail']);
+Route::post("add_to_cart",[serviceController::class,'addToCart']);
