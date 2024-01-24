@@ -75,37 +75,44 @@ class serviceController extends Controller
     {
         $userId=Session::get('user')['id'];
         $allCart=Cart::where('user_id',$userId)->get();
+        $subject = DB::table('cart')
+        ->join('services','cart.service_id','=','services.id')
+        ->where('cart.user_id',$userId)
+        ->select('services.*','cart.id as cart_id')
+        ->get();
+
+        $total=  DB::table('cart')
+        ->join('services','cart.service_id','=','services.id')
+        ->where('cart.user_id',$userId)
+        ->select('services.*','cart.id as cart_id')
+        ->sum('services.price');
+
+
+        $mails=Session::get('user')['email'];
+         
+        if ($this->isOnline()){
+            $mail_data=[
+                'recipent'=>'shinanmohamed363@gmail.com',
+                'fromEmail'=>$mails,
+                'fromName'=>$mails,
+                'subject'=>'Quotation',
+                'body'=>$subject,
+                'total'=>$total,
+            ];
+            \Mail::send('email-template',$mail_data,function($message)use($mail_data){
+                $message->to($mail_data['recipent'])
+                ->from($mail_data['fromEmail'],$mail_data['fromName'])
+                ->subject($mail_data['subject']); 
+            });
+        }
+        else
+        {
+            return "no connection";
+        }
+        
         foreach($allCart as $cart)
         {
-                $subject = DB::table('cart')
-                ->join('services','cart.service_id','=','services.id')
-                ->where('cart.user_id',$userId)
-                ->select('services.*','cart.id as cart_id')
-                ->get();
-
-                $mails=Session::get('user')['email'];
-                 
-                if ($this->isOnline()){
-                    $mail_data=[
-                        'recipent'=>'shinanmohamed363@gmail.com',
-                        'fromEmail'=>$mails,
-                        'fromName'=>$mails,
-                        'subject'=>'Quotation',
-                        'body'=>$subject,
-                    ];
-                    \Mail::send('email-template',$mail_data,function($message)use($mail_data){
-                        $message->to($mail_data['recipent'])
-                        ->from($mail_data['fromEmail'],$mail_data['fromName'])
-                        ->subject($mail_data['subject']); 
-                    });
-                }
-                else
-                {
-                    return "no connection";
-                }
-
-
-
+               
                 $quotation=new quotation;
                 $quotation->service_id=$cart['service_id'];
                 $quotation->user_id=$cart['user_id'];
