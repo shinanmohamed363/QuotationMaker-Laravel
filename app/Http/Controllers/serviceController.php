@@ -107,9 +107,9 @@ class serviceController extends Controller
         }
         else
         {
-            return "no connection";
+           return "no connection";
         }
-        
+
         foreach($allCart as $cart)
         {
                
@@ -133,5 +133,17 @@ class serviceController extends Controller
         }else{
             return false;
         }
+    }
+
+    function myOrders()
+    {
+        $userId=Session::get('user')['id'];
+        $quotations= DB::table('quotations')
+         ->join('services','quotations.service_id','=','services.id')
+         ->where('quotations.user_id',$userId)
+         ->get();
+        
+
+        return view('myQutations',['quotations'=>$quotations]);
     }
 }
