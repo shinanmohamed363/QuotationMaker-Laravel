@@ -146,4 +146,18 @@ class serviceController extends Controller
 
         return view('myQutations',['quotations'=>$quotations]);
     }
+
+   public function store (request $req)
+    { 
+        $requestData = $req->all();
+
+        if ($req->hasFile('gallery')) {
+            $fileName = time().$req->file('gallery')->getClientOriginalName();
+            $path = $req->file('gallery')->storeAs('gallery', $fileName, 'public');
+            $requestData["gallery"] = '/storage/'.$path;
+        }
+    
+        Service::create($requestData);
+         
+    }
 }

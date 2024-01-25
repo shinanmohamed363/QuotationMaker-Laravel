@@ -36,3 +36,5 @@ Route::get("ordernow",[serviceController::class,'orderNow']);
 Route::post("orderplace",[serviceController::class,'orderplace']);
 route::get('email',function(){mail::to('shinanmohamed363@gmail.com')->send(new \App\Mail\hellomail);});
 Route::get("myorders",[serviceController::class,'myOrders']);
+Route::view("insertservices","insertservices");
+Route::post("/service", [serviceController::class,'store']);
