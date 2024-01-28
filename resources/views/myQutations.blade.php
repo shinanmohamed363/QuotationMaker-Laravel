@@ -24,6 +24,6 @@
           
          
      </div>
-     <img class="trending-image" src="C:\Users\shina\Downloads\images.jpg" width='50' height='50'>
+    
 </div>
 @endsection 

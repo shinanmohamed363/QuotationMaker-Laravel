@@ -1,3 +1,5 @@
+
+
 @extends('master')
 @section("content")
 <div class="container">
@@ -14,7 +16,7 @@
        <br><br>
        <form action="/add_to_cart" method="POST">
            @csrf
-           <input type="text" name="service_id" value={{$services['id']}}>
+           <input type="hidden" name="service_id" value={{$services['id']}}>
        <button class="btn btn-primary">Add to Cart</button>
        </form>
        <br><br>

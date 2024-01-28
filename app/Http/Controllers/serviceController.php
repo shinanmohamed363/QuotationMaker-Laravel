@@ -92,8 +92,8 @@ class serviceController extends Controller
          
         if ($this->isOnline()){
             $mail_data=[
-                'recipent'=>'shinanmohamed363@gmail.com',
-                'fromEmail'=>$mails,
+                'recipent'=>$mails,
+                'fromEmail'=>'sananonedaydigital@gmail.com',
                 'fromName'=>$mails,
                 'subject'=>'Quotation',
                 'body'=>$subject,
