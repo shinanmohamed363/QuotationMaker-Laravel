@@ -16,23 +16,24 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- services page linkes  -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+<!-- button linkes  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
     {{View::make('header')}}
     @yield('content')
 
-
 </body>
 <style>
 
-.navbar-brand {
-            font-family: 'Arial', sans-serif; /* Example of attractive font design */
-            font-size: 24px; /* Adjust font size as needed */
-        }
-        .navbar-nav .nav-link {
-            font-family: 'Arial', sans-serif; /* Example of attractive font design */
-            font-size: 18px; /* Adjust font size as needed */
-        }
+    
     body{
         margin: 0;
         font-family: sans-serif;
@@ -434,9 +435,217 @@ footer .wave .waves#wave4 {
   }
 }  
 
-<!-- new css -->
+<!-- new detailes services page css -->
+@font-face {
+  font-family: 'Raiderfont';
+  src: local('Raiderfont'), url('./fonts/Raiderfont.ttf') format('truetype');
+}
 
-<!-- new css end -->
+ul {
+  list-style: none;
+}
+
+.leftdetailes,
+.rightdetailes{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+}
+
+.leftdetailes{
+  background: #B3B4AF;
+  left: 0%;
+  width: 0%;
+}
+
+.rightdetailes{
+  background: #191921;
+  right: 0%;
+  width: 100%;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  padding: 0 20px;
+}
+
+.nav ul li {
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 8px;
+  font-weight: 600;
+  padding: 0 30px;
+}
+
+.nav .logo {
+  flex: 1;
+  font-size: 18px;
+  letter-spacing: 0;
+}
+
+.nav .menu {
+  flex: 1;
+  font-size: 18px;
+}
+
+.nav .collection {
+  flex: 1;
+}
+
+.nav .explore {
+  flex: 4;
+}
+
+.nav .search {
+  flex: 3;
+}
+
+.nav .profile {
+  flex: 0;
+}
+
+.nav .profile .img {
+  background-image: url('./img/web-development-responsive-web-design-web-page-web-design-793e2cfa8a2302dc6b5c7cfda91118aa.png');
+  background-position: 50%;
+  background-size: cover;
+  height: 100px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.img-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 250px;
+}
+
+.img-wrapper .karina {
+  
+  background-size: contain; /* Adjust this property */
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 590px;
+  width: 90%;
+}
+.info {
+  position: absolute;
+  bottom: 0;
+  left: 180px;
+  background: rgba(0, 0, 0, .8);
+  padding: 0 10px;
+}
+
+.info ul li{
+  display: inline-block;
+  padding: 20px 25px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.info i {
+  font-size: 18px;
+}
+
+.text {
+  position: absolute;
+  top: 30%;
+  right: 100px;
+  transform: translateY(-50%);
+}
+
+
+.text h1 {
+  font-size: 90px;
+  color: #fff;
+  font-family: 'Raiderfont';
+  text-transform: uppercase;
+}
+.text h2 {
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  top:80px;
+  margin: 10px 0px 0px;
+  width:400px;
+  left: 500px;
+ 
+}
+
+.text .pricedeaties {
+    top: 150px;
+}
+
+
+.text p {
+  font-size: 20px;
+  top: 10%;
+  color: #fff;
+  font-family: monospace;
+  position: relative;
+  top: 20px;
+  left: 380px;
+  width: 700px; /* Adjust this width as needed */
+  word-wrap: break-word;
+  text-align: left; 
+}
+
+.name1 {
+  position: absolute;
+  top: 50%;
+  left: -270px;
+  transform: translateY(-50%);
+  font-size: 90px;
+  font-family: 'Raiderfont';
+  text-transform: uppercase;
+  color: black;
+  -webkit-text-stroke: 2px #fff;
+}
+
+.bottomnav {
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+}
+
+.bottomnav ul li {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  margin-top: 20px;
+}
+
+.bottomnav .btn{
+
+}
+
+.bottomnav ul li:nth-child(2) {
+  font-weight: bolder;
+}
+
+.bottomnav ul li:nth-child(2)::before {
+  content: "";
+  display: inline-block;
+  border: 1px solid #fff;
+  width: 65px;
+  margin: 0 10px 0 -78px;
+  transform: translateY(-3px);
+}
+<!-- buttons css -->
+
+
+
+
+<!-- end of services detailes css end -->
 
 
     <!-- slider and minified JavaScript -->
@@ -456,7 +665,7 @@ footer .wave .waves#wave4 {
         padding-top: 100px;
     }
     img.slider-img{
-        height: 400px !important
+        height: 500px !important
     }
     .custom-services{
         height: 1000px
@@ -485,7 +694,108 @@ footer .wave .waves#wave4 {
         margin-bottom: 20px;
         padding-bottom: 20px
     }
-   
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+  .bottomnav .btn{
+  width: 10em;
+  height: 5em;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 3em;
+  box-shadow: 0 0 1em rgba(0,0,0, .2);
+  outline: none;
+  cursor: pointer;
+  top:108px;
+   right:200px;
+  transition: transform .3s ease;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.btn:active{
+  transform: scale(.9);
+}
+
+.btn__text{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color);
+  position: absolute;
+}
+
+.btn__text--second{
+  opacity: 0;
+}
+
+.btn__icon{
+  font-size: 1.5rem;
+  color: var(--color);
+  position: absolute;
+}
+
+.btn__icon--cart{
+  left: -20%;
+}
+
+.btn__icon--box{
+  top: -50%;
+}
+
+/* --------- ANIMATION ----------- */
+.btn.active .btn__text--first{
+  animation: text1 .3s forwards;
+}
+
+.btn.active .btn__text--second{
+  animation: text2 3s forwards;
+}
+
+.btn.active .btn__icon--cart{
+  animation: cart 2.5s forwards;
+}
+
+.btn.active .btn__icon--box{
+  animation: box 1.5s forwards;
+}
+
+@keyframes text1 {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes text2 {
+  90%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes cart {
+  30%, 60%{
+    left: 42%;
+  }
+  100%{
+    left: 110%;
+  }
+}
+
+@keyframes box {
+  80%{
+    color: var(--color);
+  }
+  90%, 100%{
+    top: 15%;
+    color: transparent;
+  }
+} 
     
     </style>
     <script>
