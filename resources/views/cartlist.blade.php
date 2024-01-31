@@ -15,10 +15,10 @@
               <thead>
                   <tr>
                      
-                      <th> Customer <span class="icon-arrow">&UpArrow;</span></th>
-                      <th> Location <span class="icon-arrow">&UpArrow;</span></th>
-                      <th> Order Date <span class="icon-arrow">&UpArrow;</span></th>
-                      <th> Status <span class="icon-arrow">&UpArrow;</span></th>
+                      <th> Image <span ></span></th>
+                      <th> Name  <span class="icon-arrow">&UpArrow;</span></th>
+                      <th> Price <span ></span></th>
+                      <th> Remove <span ></span></th>
                       
                   </tr>
               </thead>
