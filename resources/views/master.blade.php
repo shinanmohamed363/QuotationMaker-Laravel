@@ -34,15 +34,14 @@
 <style>
 
     
-    body{
-        margin: 0;
-        font-family: sans-serif;
-        background:#f2f2f2;
-        background-color: var(--clr-primary-800);
-        place-content: center;
-        
-        
-    }
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #ffff ;
+   
+}
+
+
     h3{
         text-align: center;
         font-size: 30px;
