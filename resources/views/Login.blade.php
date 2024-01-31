@@ -26,7 +26,7 @@
     <div class="nav">
       <div class="logo">
         <h1>
-          <span>ONE DAY <br> DIGITAL</span>
+          <img src="https://oneday.digital/wp-content/uploads/2020/11/web-logo-size-790x323.png" style="width: 300px; height: 120px;">
           <br>
           YOUR BUSINESS START HERE
         </h1>
@@ -34,9 +34,9 @@
 
       <div class="menu-links">
         <ul>
-          <li>home.</li>
-          <li>Register.</li>
-          <li>About Us.</li>
+          <li><a href="/#" style="text-decoration: none; color: inherit;">Home.</a></li>
+          <li><a href="/Register" style="text-decoration: none; color: inherit;">Register.</a></li>
+          <li><a href="/About" style="text-decoration: none; color: inherit;">About Us.</a></li>
         </ul>
       </div>
 
