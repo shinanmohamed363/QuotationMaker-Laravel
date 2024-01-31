@@ -318,7 +318,7 @@ thead th span.icon-arrow {
     font-size: 1rem;
     
     margin-left: .5rem;
-    transition: .2s ease-in-out;
+    transition: 1s ease-in-out;
 }
 
 thead th:hover span.icon-arrow{
