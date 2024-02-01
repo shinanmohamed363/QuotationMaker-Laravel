@@ -149,6 +149,7 @@ class serviceController extends Controller
 
    public function store (request $req)
     { 
+        
         $requestData = $req->all();
 
         if ($req->hasFile('gallery')) {

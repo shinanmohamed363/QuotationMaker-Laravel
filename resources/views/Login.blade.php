@@ -11,7 +11,6 @@
   <link href="/serviceQuotationMaker/resources/css/style.css" rel="stylesheet" type="text/css">
 
   <title>One day digital</title>
- 
 </head>
 
 <body>
@@ -20,9 +19,7 @@
     <h1>ONE DAY DIGITAL</h1>
     <span>YOUR BUSINESS START HERE </span>
   </div>
-
   <div class="wrapper">
-
     <div class="nav">
       <div class="logo">
         <h1>
