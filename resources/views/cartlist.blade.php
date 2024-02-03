@@ -1,14 +1,20 @@
 @extends('master')
 @section("content")
+{{View::make('header')}}
 <div class="container">
+    
   <main class="table" id="customers_table">
+    
       <section class="table__header">
+       
           <h1>Cart Sevices </h1>
           <div class="input-group">
               <input type="search" placeholder="Search Data...">
               <img src="images/search.png" alt="">
           </div>
-          <a class="btn btn-success" href="ordernow">Order Now</a> <br> <br>
+          @if(count($services) > 0)
+              <a class="btn btn-success" href="ordernow">Order Now</a> <br> <br>
+          @endif
       </section>
       <section class="table__body">
           <table>

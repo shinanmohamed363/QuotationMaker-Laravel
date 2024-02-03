@@ -8,6 +8,7 @@
 
 
     <div class="content1">
+      {{View::make('header')}}
       <div class="img-wrapper">
         <div class="karina" style="background-image: url('<?php echo $services['gallery']; ?>')"></div>
       </div>

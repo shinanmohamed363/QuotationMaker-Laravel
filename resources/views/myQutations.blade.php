@@ -1,5 +1,6 @@
 @extends('master')
 @section("content")
+{{View::make('header')}}
 <div class="container">
   <main class="table" id="customers_table">
       <section class="table__header">
@@ -318,7 +319,7 @@ thead th span.icon-arrow {
     font-size: 1rem;
     
     margin-left: .5rem;
-    transition: 1s ease-in-out;
+    transition: .2s ease-in-out;
 }
 
 thead th:hover span.icon-arrow{

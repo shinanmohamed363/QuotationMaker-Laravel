@@ -6,6 +6,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>E-comm Project</title>
     <!-- Latest compiled and minified CSS -->
@@ -27,12 +30,14 @@
 
 </head>
 <body>
-    {{View::make('header')}}
+   
     @yield('content')
 
 </body>
 <style>
-
+nav{
+  position: fixed;
+}
     
 body {
     margin: 0;
@@ -693,6 +698,7 @@ ul {
         margin-bottom: 20px;
         padding-bottom: 20px
     }
+
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
   .bottomnav .btn{
   width: 10em;

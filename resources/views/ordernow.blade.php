@@ -1,5 +1,6 @@
 @extends('master')
 @section("content")
+{{View::make('header')}}
 <div class="container1">
   <div class="payment_wrap">
     <div class="container">
