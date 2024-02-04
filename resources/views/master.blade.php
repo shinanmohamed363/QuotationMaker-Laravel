@@ -39,10 +39,14 @@ nav{
   position: fixed;
 }
     
+::-webkit-scrollbar {
+        display: none;
+    }
 body {
     margin: 0;
     font-family: sans-serif;
     background-color: #ffff ;
+    
    
 }
 

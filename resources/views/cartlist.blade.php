@@ -2,19 +2,16 @@
 @section("content")
 {{View::make('header')}}
 <div class="container">
-    
   <main class="table" id="customers_table">
-    
       <section class="table__header">
-       
           <h1>Cart Sevices </h1>
           <div class="input-group">
               <input type="search" placeholder="Search Data...">
               <img src="images/search.png" alt="">
           </div>
           @if(count($services) > 0)
-              <a class="btn btn-success" href="ordernow">Order Now</a> <br> <br>
-          @endif
+          <a class="btn btn-success" href="ordernow">Order Now</a> <br> <br>
+        @endif
       </section>
       <section class="table__body">
           <table>
@@ -37,7 +34,7 @@
                       <td> {{$item->price}} </td>
 
                       <td>
-                          <p class="status delivered"> <a href="/removecart/{{$item->cart_id}}" class="btn btn-warning" >Remove to Cart</a></p>
+                          <a class="btn btn-warning"  href="/removecart/{{$item->cart_id}}"> Remove to Cart</a>
                       </td>
                   </tr>
                   @endforeach   

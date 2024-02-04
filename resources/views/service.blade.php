@@ -2,8 +2,8 @@
 @section("content")
 
 <div class="custom-services">
-     <!-- test open --> {{View::make('header')}}
-    
+     <!-- test open -->
+     {{View::make('header')}}
 
       <!-- test open -->
       <div class="carousel">
@@ -12,7 +12,6 @@
           
           @foreach($services as $item)
             <div class="item">
-              
 
                 <img src="{{$item['gallery']}}">
                 <div class="introduce">
@@ -574,7 +573,7 @@ backButton.onclick = function(){
             <div class="content">
                 <img class="imgs" src="{{$item['gallery']}}"> 
                 <h3>{{$item['name']}}</h3>
-                <h6>{{$item['price']}}</h6>
+               
                 
                 <ul class = stars>
                         <li class= starslist><i class="fa fa-star checked"></i></li>
@@ -585,7 +584,7 @@ backButton.onclick = function(){
                 </ul>
 
                 <button  class="buy-1"  onclick="location.href='detail/{{$item['id']}}'" type="button">
-                    Buy One
+                    See More &#8599
                 </button>
                 
 
@@ -599,13 +598,14 @@ backButton.onclick = function(){
         </div>
         <div class="scroller" data-speed="fast">
             <ul class="tag-list scroller__inner">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JS</li>
-              <li>SSG</li>
+              <li>Web dev</li>
+              <li>Media Management</li>
+              <li>Template Desing</li>
+              <li>Mobile Application</li>
               <li>webdev</li>
               <li>animation</li>
               <li>UI/UX</li>
+              
             </ul>
           
           
@@ -623,54 +623,45 @@ backButton.onclick = function(){
         </div >
         <section class="Wrapper" style="display: flex; justify-content: center;">
             <div class="pricing-table">
+               
                 <div class="pricing-card">
-                  <h3 class="pricing-card-header">Personal</h3>
-                  <div class="price"><sup>$</sup>15<span>/MO</span></div>
+                  <h3 class="pricing-card-header">SUB PIXEL</h3>
+                  <div class="price"><sup></sup><span>MONTHLY PACK</span></div>
                   <ul>
-                    <li><strong>3</strong> Websites</li>
-                    <li><strong>20 GB</strong> SSD</li>
-                    <li><strong>1</strong> Domain Name</li>
-                    <li><strong>5</strong> Email</li>
-                    <li><strong>1x</strong> CPU & RAM</li>
+                    <li>Websites & Instagram</li>
+                    <li><strong>10</strong> posts & <strong>5</strong>Stories</li>
+                    <li>Social Media Strategy</li>
+                    <li>Ads Management</li>
+                    <li>Creative Captions</li>
                   </ul>
-                  <a href="#" class="order-btn">Order Now</a>
+                  <a href="#" class="order-btn">Get Quote</a>
                 </div>
             
                 <div class="pricing-card">
-                  <h3 class="pricing-card-header">Professional</h3>
-                  <div class="price"><sup>$</sup>30<span>/MO</span></div>
+                  <h3 class="pricing-card-header">MEGA PIXEL</h3>
+                  <div class="price"><sup></sup><span>MONTHLY PACK</span></div>
                   <ul>
-                    <li><strong>10</strong> Websites</li>
-                    <li><strong>50 GB</strong> SSD</li>
-                    <li><strong>1</strong> Domain Name</li>
-                    <li><strong>20</strong> Email</li>
-                    <li><strong>1.5x</strong> CPU & RAM</li>
+                    <li>Facebook, Instagram & LinkedIn</li>
+                    <li><strong>20</strong> posts & <strong>15</strong>Stories</li>
+                    <li>Social Media Stragegy</li>
+                    <li>Ads Management</li>
+                    <li>Creative Captions</li>
+                    <li>Monthly Performance Reports</li>
+                    <li><strong>2</strong>Facebook Covers</li>
                   </ul>
-                  <a href="#" class="order-btn">Order Now</a>
+                  <a href="#" class="order-btn">Get Quote</a>
                 </div>
             
                 <div class="pricing-card">
-                  <h3 class="pricing-card-header">Premium</h3>
-                  <div class="price"><sup>$</sup>50<span>/MO</span></div>
+                  <h3 class="pricing-card-header">PIXEL</h3>
+                  <div class="price"><sup></sup><span>MONTHLY PACK</span></div>
                   <ul>
-                    <li><strong>30</strong> Websites</li>
-                    <li><strong>150 GB</strong> SSD</li>
-                    <li><strong>1</strong> Domain Name</li>
-                    <li><strong>40</strong> Email</li>
-                    <li><strong>2x</strong> CPU & RAM</li>
-                  </ul>
-                  <a href="#" class="order-btn">Order Now</a>
-                </div>
-            
-                <div class="pricing-card">
-                  <h3 class="pricing-card-header">Ultimate</h3>
-                  <div class="price"><sup>$</sup>80<span>/MO</span></div>
-                  <ul>
-                    <li><strong>100</strong> Websites</li>
-                    <li><strong>500 GB</strong> SSD</li>
-                    <li><strong>1</strong> Domain Name</li>
-                    <li><strong>100</strong> Email</li>
-                    <li><strong>4x</strong> CPU & RAM</li>
+                    <li>Websites & Instagram</li>
+                    <li><strong>10</strong> posts & <strong>5</strong>Stories</li>
+                    <li>Social Media Strategy</li>
+                  
+                    <li>Monthly Performance Reports</li>
+                    <li><strong>01</strong> Facebook Cover</li>
                   </ul>
                   <a href="#" class="order-btn">Order Now</a>
                 </div>

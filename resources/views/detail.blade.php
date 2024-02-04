@@ -27,7 +27,7 @@
 	<p> Detalies </p>
         <p><?php echo $services['description']; ?></p>
 	<h2>category : <?php echo $services['category']; ?> </h2>
-    <h2 class="pricedeaties">price : <?php echo $services['price']; ?></h2>
+    
   
     
       </div>
@@ -42,9 +42,9 @@
             <button class="btn" type="submit">  
                 <i class="btn__icon btn__icon--cart fa-solid fa-cart-shopping"></i>
                 <i class="btn__icon btn__icon--box fa-solid fa-parachute-box"></i>
-                <span class="btn__text btn__text--first">Add to cart</span>
+                <span class="btn__text btn__text--first">Get Quote</span>
                 <span class="btn__text btn__text--second">Added</span>
-            </button>
+            </button> 
         </form>
         <ul>
             <li>Our</li>
