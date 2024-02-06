@@ -20,7 +20,7 @@
                      
                       <th> Image <span ></span></th>
                       <th> Name  <span class="icon-arrow">&UpArrow;</span></th>
-                      <th> Price <span ></span></th>
+                    
                       <th> Remove <span ></span></th>
                       
                   </tr>
@@ -31,16 +31,13 @@
                       
                       <td> <img src="{{$item->gallery}}" alt=""></td>
                       <td> {{$item->name}} </td>
-                      <td> {{$item->price}} </td>
+                   
 
                       <td>
                           <a class="btn btn-warning"  href="/removecart/{{$item->cart_id}}"> Remove to Cart</a>
                       </td>
                   </tr>
                   @endforeach   
-
-                  
-                  
               </tbody>
           </table>
       </section>

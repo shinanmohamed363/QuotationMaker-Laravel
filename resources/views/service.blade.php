@@ -19,26 +19,34 @@
                     <div class="topic">{{$item['name']}}</div>
                     <div class="des">
                         <!-- 20 lorem -->   
-                        {{$item['description']}}
+                       Our Best Services
                     </div>
                     <button class="seeMore">SEE MORE &#8599</button>
                 </div>
                 <div class="detail">
-                    <div class="title">{{$item['name']}}</div>
+                    <div class="title" style="width: 800px;text-align: left;">{{$item['name']}}</div>
                     <div class="des">
-                      {{$item['description']}}</div>
+                        <?php
+                        $description_parts = explode('.', $item['description']);
+                        echo "<ul style='color: black; font-size: 13px;text-align: left; list-style-type: disc;line-height: 2; '>";
+                        foreach($description_parts as $part) {
+                            if(trim($part) != '') {
+                                echo "<li>" . trim($part) . ".</li>";
+                            }
+                        }
+                        echo "</ul>";
+                        ?></div>
                    
-                    <div class="checkout">  
-                       
-                       
-                        <form id="add-to-cart-form" action="/add_to_cart" method="POST">
-                          @csrf
-                          <input type="hidden" name="service_id" value="{{ $item['id'] }}">
-                          <button class="btn" type="submit">  
-                            Get Quote
-                          </button>
-                      </form>
-                    </div>
+                   <div class="checkout" style="display: flex; justify-content: center; align-items: center;">  
+                    <form id="add-to-cart-form" action="/add_to_cart" method="POST">
+                      @csrf
+                      <input type="hidden" name="service_id" value="{{ $item['id'] }}">
+                      <button class="btn" type="submit">  
+                        Get Quote
+                      </button>
+                    </form>
+                  </div>
+                  
                 </div>
             </div>
             @endforeach();

@@ -6,7 +6,7 @@
 <body >
     <div style="font-family: 'Arial', sans-serif; margin: 20px; background-color: #eee;">
         <div style="margin: 20px auto; max-width: 1600px; padding: 20px; border: 1px solid rgb(221, 221, 221); border-radius: 10px; background: linear-gradient(rgb(255, 255, 255), rgb(242, 242, 242)); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;">
-        <div style="margin-bottom: 20px; text-align: right;"><img style="float: left;" src="	https://oneday.digital/wp-content/uploads/2020/11/web-logo-size-790x323.png" alt="Plus Icon from Icons8" width="259" height="150">
+        <div style="margin-bottom: 20px; text-align: right;"><img style="float: left;" src="	https://oneday.digital/wp-content/uploads/2020/11/web-logo-size-790x323.png" alt="Plus Icon from Icons8" width="259" height="110">
         <table style="border-collapse: collapse; width: 23.1875%; height: 156px; border-width: 0px; margin-right: 0px; margin-left: auto;" border="1"><colgroup><col style="width: 100%;"></colgroup>
         <tbody>
         <tr style="height: 54px;">
@@ -30,7 +30,7 @@
         </table>
         </div>
         <div style="margin-bottom: 20px;">&nbsp;</div>
-        <h1 style="color: rgb(85, 85, 85); margin-top: 10px; text-align: center;"><span style="text-decoration: underline;"><strong>QUOTATION-{{Session::get('user')['name']}}</strong></span></h1>
+        <h1 style="color: rgb(85, 85, 85); margin-top: 10px; text-align: center;"><span style="text-decoration: underline;"><strong>QUOTATION-{{ ucwords(Session::get('user')['name']) }}</strong></span></h1>
         <div style="overflow-x: auto;">
             <style>
                 /* Style the table header */
@@ -51,24 +51,34 @@
             
             <!-- Your table goes here -->
             
-            <table style="width: 100%; border-collapse: collapse;">
-                <thead class="table-header" style="background-color: rgb(235, 174, 44);">
-                    <tr style="background-color: rgb(235, 174, 44);>
-                        <th style="border: 1px solid black; overflow-wrap: break-word; width: 70.111%;">Description</th>
-                        <th style="border: 1px solid black; overflow-wrap: break-word; width: 29.889%;">Price</th>
+            <table style="width: 100%;border-collapse: separate;border: 0.5px solid black;border-spacing: 0; ">
+                <thead class="table-header" style="background-color: #FFC000; height: 50px;border-radius: 10px; ">
+                    <tr style="background-color:#FFC000;">
+                        <th style="border: 0.5px solid black; overflow-wrap: break-word; width: 70.111%; padding-left: 10px;font-size:14px"><strong>Description</strong></th>
+                        <th style="border: 0.5px solid black; overflow-wrap: break-word; width: 29.889%; padding-left: 10px;font-size:14px"><strong>Price</strong></th>
                     </tr>
                 </thead>
                 @forEach($body as $item)
                 <tbody><!-- Repeat this block for each item -->
-                    <tr style="@if($loop->iteration % 2 == 0) background-color: #f2f2f2; @else background-color: #ddd; @endif">
-                        <td style="border: 1px solid black; word-wrap: break-word; white-space: normal; max-width: 500px;">
-                            <strong>Name:</strong>{{ $item->name }}<br><br><strong>Features:</strong>
+                    <tr style="@if($loop->iteration % 2 == 0) background-color:#ffffff ; @else background-color:#FFF2CC ; @endif">
+                        <td style="border: 1px solid #D3D3D3; padding-left: 10px; padding-top:10px; paddword-wrap: break-word; white-space: normal; max-width: 500px; ">
+                            <strong>Name:</strong>{{ $item->name }}<br><strong style="padding-top:10px;" >Features:</strong>
                             <ul>
-                                <li>{{ $item->description }}</li>
+                                <?php
+                                $description = $item->description; // your paragraph
+                                $sentences = explode('.', $description); // split the paragraph into sentences
+                                
+                                foreach ($sentences as $sentence) {
+                                    $sentence = trim($sentence); // remove leading/trailing white spaces
+                                    if (!empty($sentence)) { // check if the sentence is not empty
+                                        echo "<li>{$sentence}.</li>"; // print each sentence as a list item
+                                    }
+                                }
+                                ?>
                                 <!-- Add more list items as needed -->
                             </ul>
                         </td>
-                        <td style="border: 1px solid black; overflow-wrap: break-word; width: 29.889%; text-align: center;">{{ $item->price }}</td>
+                        <td style="border: 1px solid #D3D3D3; overflow-wrap: break-word; width: 29.889%; text-align: center;">{{ $item->price }} LKR <br>One Time Payment</td>
                     </tr>
                     <!-- End of block -->
                 </tbody>                
@@ -76,9 +86,13 @@
             </table>       
         <table style="border-collapse: collapse; width: 100%; border-width: 0px;" border="1"><colgroup><col style="width: 70.1689%;"><col style="width: 29.8311%;"></colgroup>
             <tbody>
-            <tr>
-            <td style="border-width: 0px; text-align: center;">Total</td>
-            <td style="text-align: center; border-width: 0px;">{{ $total }}</td>
+            <tr style="background-color:#FFC000; height: 30px;width: 100%; 
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 10px;
+            border: 1px solid black;">
+            <td style="border-width: 0px; text-align: center;font-size:14px"><strong>Total</strong></td>
+            <td style="text-align: center; border-width: 0px;font-size:14px"><strong>{{ $total }}LKR</strong></td>
             </tr>
             </tbody>
             </table>

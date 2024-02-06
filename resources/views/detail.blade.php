@@ -15,24 +15,43 @@
 
       <div class="info">
         <ul>
-          <li>unsplash.com</li>
-          <li>@karinates</li>
-          <li>karinates.com</li>
+          <li>one day digital.com</li>
+          <li>@chanscoder</li>
+          <li>best service</li>
           <li><i class="fa fa-share-alt"></i></li>
         </ul>
       </div>
 
       <div class="text">
-        <h1>shopping application</h1>
-	<p> Detalies </p>
-        <p><?php echo $services['description']; ?></p>
-	<h2>category : <?php echo $services['category']; ?> </h2>
+        <h1><?php echo $services['name']; ?></h1>
+      </div>
+
+      <div class="Details">
+        <h2> Features : </h2>
+      </div>
+
+      <div class="responsive-list">
+        <p>
+        <?php
+        $description_parts = explode('.', $services['description']);
+        echo "<ul style='color: white; font-size: 12px;'>";
+        foreach($description_parts as $part) {
+            if(trim($part) != '') {
+                echo "<li>" . trim($part) . ".</li>";
+            }
+        }
+        echo "</ul>";
+        ?>
+        </p>
+      </div>
+        
+	
     
   
     
-      </div>
+      
 
-      <div class="name1">karina tes</div>
+      <div class="name1">One Digital</div>
       
 
       <div class="bottomnav">
@@ -107,6 +126,16 @@ form.addEventListener('submit', () => {
     })
 
     TweenMax.from('.text p', 2, {
+      delay: .7,
+      x: 1000,
+      ease: Circ.easeInOut
+    })
+    TweenMax.from('.responsive-list', 2, {
+      delay: .7,
+      x: 1000,
+      ease: Circ.easeInOut
+    })
+    TweenMax.from('.Details', 2, {
       delay: .7,
       x: 1000,
       ease: Circ.easeInOut

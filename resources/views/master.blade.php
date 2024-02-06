@@ -50,7 +50,11 @@ body {
    
 }
 
-
+@media screen and (max-width: 600px) {
+    .responsive-list {
+        font-size: 16px;
+    }
+}
     h3{
         text-align: center;
         font-size: 30px;
@@ -565,7 +569,7 @@ ul {
 
 .text {
   position: absolute;
-  top: 30%;
+  
   right: 100px;
   transform: translateY(-50%);
 }
@@ -576,40 +580,85 @@ ul {
   color: #fff;
   font-family: 'Raiderfont';
   text-transform: uppercase;
+
 }
 .text h2 {
   font-size: 18px;
   color: #fff;
   text-transform: uppercase;
   position: relative;
-  top:80px;
+  bottom:360px;
   margin: 10px 0px 0px;
   width:400px;
-  left: 500px;
+  left: 300px;
+  top:120px
  
 }
 
-.text .pricedeaties {
-    top: 150px;
+
+
+
+.text{
+  font-size: 14px;
+  color: white;
+  list-style-type: disc;
+  position: absolute; /* Change this to 'absolute' */
+  bottom: 100px;
+  right: 160px;
+  width: 100%;
+  height: 220px; /* Set a fixed height */
+  text-align: right; 
+  word-wrap: break-word;
+  overflow: auto; /* Handle overflow */
+  top:25%;
+
 }
 
-
-.text p {
-  font-size: 20px;
-  top: 10%;
-  color: #fff;
-  font-family: monospace;
-  position: relative;
-  top: 20px;
-  left: 380px;
-  width: 700px; /* Adjust this width as needed */
-  word-wrap: break-word;
+.responsive-list {
+ 
+  color: white;
+  list-style-type: disc;
+  position: absolute; /* Change this to 'absolute' */
+  bottom: 230px;
+  left: 62%;
+  width: 580px;
+  height: 400px; /* Set a fixed height */
   text-align: left; 
+  word-wrap: break-word;
+  overflow: auto; /* Handle overflow */
+}
+.responsive-list li{
+  font-size: 18px;
+  list-style-type: disc;
+  line-height: 2;
+}
+.Details{
+ 
+  position: absolute; /* Change this to 'absolute' */
+  bottom: 230px;
+  left: 60%;
+  bottom:350px;
+  width: 580px;
+  height: 370px; /* Set a fixed height */
+  text-align: left; 
+  word-wrap: break-word;
+  overflow: auto; /* Handle overflow */
+}
+.Details h2{
+  color: white;
+  font-size: 24px;
+
+
+}
+.detailservices li{
+  color: rgb(24, 21, 21);
+  font-size: 12px;
+
 }
 
 .name1 {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: -270px;
   transform: translateY(-50%);
   font-size: 90px;
